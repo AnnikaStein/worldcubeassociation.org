@@ -314,7 +314,7 @@ de:
     #original_hash: 77003d0
     best: Bestleistung
     #original_hash: dd11868
-    single: Einzelzeit
+    single: Einzelergebnis
     #original_hash: 15f86c0
     average: Schnitt
     #original_hash: e7f6fc5
@@ -1666,7 +1666,7 @@ de:
       text_html: >-
         Schaue dir unser kürzlich veröffentlichtes, offizielles Merchandise an,
         welches eine Auswahl an Kleidungsstücken wie z.B. T-Shirts oder Hoodies
-        enthält
+        enthält.
       #original_hash: b0fc6c4
       link_title: Link zum Shop
     records:
@@ -2803,17 +2803,17 @@ de:
       #original_hash: dc5c597
       hide_highlights: Blende Höhepunkte aus.
       #original_hash: f691bf2
-      result: ein Ergebnis
+      result: einem Ergebnis
       #original_hash: acab754
-      single: ein Einzelversuch
+      single: einem Einzelergebnis
       #original_hash: e78d7c2
-      average: ein Durschnitt
+      average: einem Durchschnitt
       #original_hash: 083c83e
-      mean: ein Mittelwert
+      mean: einem Mittelwert
       #original_hash: 22bee3a
       result_sentence: 'mit %{a_win_by_word} von %{result}'
       #original_hash: 6c3b236
-      winner: '%{winner} gewann %{result_sentence} in %{event_name}.'
+      winner: '%{winner} gewann %{result_sentence} in der Kategorie %{event_name}.'
       #original_hash: ec7f18a
       first_runner_up: '%{first_runner_up} wurde Zweiter (%{first_runner_up_result})'
       #original_hash: cffa50a
@@ -3420,7 +3420,7 @@ de:
       region: Region
       type_selector:
         #original_hash: 3deb745
-        type: Tzp
+        type: Typ
         #original_hash: dd11868
         single: Einzelergebnis
         #original_hash: 15f86c0
