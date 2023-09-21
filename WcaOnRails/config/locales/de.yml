@@ -17,7 +17,7 @@ de:
     #original_hash: db871b0
     GW: Guinea-Bissau
     #original_hash: e758117
-    HK: Hongkong, China
+    HK: 'Hongkong, China'
     #original_hash: 3ad2dd8
     KN: St. Kitts and Nevis
     #original_hash: 5c34abb
@@ -31,7 +31,7 @@ de:
     #original_hash: 928b7c4
     MM: Myanmar
     #original_hash: 77e4070
-    MO: Macau, China
+    MO: 'Macau, China'
     #original_hash: 05a15c1
     PS: Palästina
     #original_hash: 655191a
@@ -309,8 +309,8 @@ de:
     world: Welt
     #original_hash: 2513cf0
     continent: Kontinent
-    #original_hash: d523ebb
-    country: Land
+    #original_hash: 0f21717
+    country: Region
     #original_hash: 0154c0d
     here: hier
     #original_hash: 77003d0
@@ -329,8 +329,8 @@ de:
     user:
       #original_hash: 603a218
       wca_id: WCA-ID
-      #original_hash: e0f64f7
-      citizen_of: Staatsbürger von
+      #original_hash: fa4c045
+      representing: Vertritt
     #original_hash: 3fc0ba1
     all_regions: Alle Gebiete
     errors:
@@ -403,8 +403,8 @@ de:
         unconfirmed_wca_id: Unbestätigte WCA-ID
         #original_hash: 8ed8874
         login: E-Mail oder WCA-ID
-        #original_hash: 1528d10
-        country_iso2: Staatsbürgerschaft
+        #original_hash: fa4c045
+        country_iso2: Vertritt
         #original_hash: ab58155
         dob: Geburtsdatum
         #original_hash: 7636bbc
@@ -432,8 +432,8 @@ de:
           wurden.
         #original_hash: de60ab8
         delegate_status: Delegierten-Status
-        #original_hash: 0f21717
-        region: Region
+        #original_hash: d219c68
+        location: Ort
         #original_hash: 730db33
         receive_delegate_reports: >-
           Ich möchte gerne Delegate Reports von WCA Competitions per E-Mail
@@ -453,10 +453,10 @@ de:
         name: Name
         #original_hash: f91b080
         name_reason: Der Grund für diesen Namen
-        #original_hash: b649210
-        cellName: Spitzname
-        #original_hash: d523ebb
-        countryId: Land
+        #original_hash: fdba578
+        cellName: Kurzbezeichnung des Wettbewerbs
+        #original_hash: 0f21717
+        countryId: Region
         #original_hash: 25b7b06
         cityName: Name der Stadt
         #original_hash: 67cd406
@@ -592,6 +592,8 @@ de:
         paid_entry_fees: Bezahlt
         #original_hash: bae7d5b
         status: Status
+        #original_hash: a6e8a0b
+        administrative_notes: Administrative Bemerkungen
         #original_hash: 709a232
         name: Name
         #original_hash: a6b9d69
@@ -633,8 +635,8 @@ de:
       person:
         #original_hash: 8c41ae8
         wca_id: Person
-        #original_hash: d523ebb
-        countryId: Land
+        #original_hash: fa4c045
+        countryId: Vertritt
         #original_hash: ab58155
         dob: Geburtsdatum
         #original_hash: 8a754c6
@@ -704,8 +706,8 @@ de:
       regional_organization:
         #original_hash: 709a232
         name: Name
-        #original_hash: d523ebb
-        country: Land
+        #original_hash: 0f21717
+        country: Region
         #original_hash: 2e8a57c
         website: Website
         #original_hash: 83fce83
@@ -854,7 +856,7 @@ de:
         #original_hash: da39a3e
         password_confirmation: ''
         #original_hash: da39a3e
-        region: ''
+        location: ''
         #original_hash: da39a3e
         remember_me: ''
         #original_hash: da39a3e
@@ -884,10 +886,11 @@ de:
           Danish Open 2016). Achte auf Großschreibung. Der Name darf nur
           alphanumerische Zeichen, Bindestriche(-), Und-Zeichen(&), Punkte(.),
           Doppelpunkte(:), Apostrophe(') und Leerzeichen( ) enthalten.
-        #original_hash: 525fcc8
+        #original_hash: fbcda66
         cellName: >-
-          Ein Spitzname für die Anzeige. Wenn der volle Name bereits kurz ist,
-          kannst Du ihn wiederverwenden (z.B. Europe 2006).
+          Eine Kurzbezeichnung zum Anzeigen. Wenn der Name des Wettbewerbs
+          weniger als %{short_name_limit} Zeichen hat, sollte dies nicht
+          verändert werden und mit dem normalen Namen übereinstimmen.
         #original_hash: bce4589
         cityName: >-
           Name der Stadt und des Verwaltungsbezirks (wenn möglich) in dem der
@@ -1221,6 +1224,10 @@ de:
         guests: ''
         #original_hash: da39a3e
         status: ''
+        #original_hash: 34ef763
+        administrative_notes: >-
+          Zusätzliche Bemerkungen die zur Verwaltung der Anmeldung dienen. Diese
+          können vom Teilnehmer nicht eingesehen werden.
       vote:
         #original_hash: da39a3e
         comment: ''
@@ -1707,6 +1714,8 @@ de:
       results_admin: Administrator
       #original_hash: 61074f1
       results_database: Datenbank
+      #original_hash: 54e0548
+      results_sidekiq: Sidekiq Dashboard
       #original_hash: aee74b8
       new_post: Neuer Post
       #original_hash: 0d67445
@@ -2057,12 +2066,13 @@ de:
         können nicht entfernt werden. Bitte kontaktiere das WCA Results Team per
         Email, um die WCA-ID mit einem anderen Account zu knüpfen.
       cannot_edit:
-        #original_hash: 13e8b80
+        #original_hash: 8bb2def
         msg: >-
-          Du kannst deinen Namen, dein Geburtsdatum, Geschlecht oder Land nicht
-          bearbeiten. Grund: %{reason}. Kontaktiere deinen <a
-          href='%{delegate_url}'>Delegierten</a> wenn Du etwas davon ändern
-          musst.
+          Du kannst deinen Namen, Geburtsdatum, Geschlecht oder Region nicht
+          ändern. Grund: %{reason}. Kontaktiere das <a
+          href='mailto:results@worldcubeassociation.org' target='_blank'>WCA
+          Results Team</a> oder deinen <a href='%{delegate_url}'>Delegate</a>,
+          wenn du etwas davon ändern möchtest.
         reason:
           #original_hash: 370ff12
           assigned: Du hast eine verknüpfte WCA-ID
@@ -2166,13 +2176,13 @@ de:
       dob_past: muss in der Vergangenheit liegen
       #original_hash: b320913
       dob_recent: muss mindestens zwei Jahre alt sein
-      #original_hash: b64df45
+      #original_hash: afbf275
       already_represented_country: >-
-        Kann das Land nicht zu einem Land ändern, das die Person bereits zuvor
-        repräsentiert hat.
-      #original_hash: b589014
+        Region kann nicht zu einer Region geändert werden, für die der
+        Teilnehmer in der Vergangenheit bereits angetreten ist.
+      #original_hash: 5fe15d4
       must_have_a_change: >-
-        Der Name des Landes muss unterschiedlich sein um dieses Profil zu
+        Der Name oder die Region muss sich unterscheiden, um die Person zu
         aktualisieren.
       #original_hash: 012f032
       must_be_senior: muss ein Senior-Delegierter sein
@@ -2257,8 +2267,8 @@ de:
       need_gender: Geschlecht benötigt
       #original_hash: ebf1ecb
       need_dob: Geburtsdatum benötigt
-      #original_hash: d84a54f
-      need_country: Land benötigt
+      #original_hash: aab7355
+      need_country: Benötigt eine Region
       #original_hash: e0bb243
       cannot_be_deleted_and_accepted: Eine Anmeldung kann nicht gleichzeitig akzeptiert und gelöscht werden.
       #original_hash: a38d024
@@ -2417,11 +2427,11 @@ de:
       title: 'Anmeldung für %{comp}'
       #original_hash: 5301648
       edit: Bearbeiten
-      #original_hash: 0ab725c
+      #original_hash: beffc45
       country_plural:
-        zero: '%{count} Länder'
-        one: 1 Land
-        other: '%{count} Länder'
+        zero: '%{count} Regionen'
+        one: 1 Region
+        other: '%{count} Regionen'
       #original_hash: 1feee0e
       export_csv: Als CSV exportieren
       #original_hash: 84add5b
@@ -2655,10 +2665,10 @@ de:
         festgestellt und die Datenbank wird entsprechend aktualisiert.
       #original_hash: 779b272
       registrations_file_label: Datei mit Anmeldungen
-      #original_hash: 4017f0e
+      #original_hash: 224f3a6
       registrations_file_hint: >-
-        CSV Datei mit Spalten: Status, Name, Country, WCA ID, Birth Date,
-        Gender, Email, und eine Spalte für jedes Event.
+        CSV-Datei mit Spalten: Status, Name, Region, WCA ID, Geburtsdatum,
+        Geschlecht, Email, und eine Spalte für jedes Event.
       #original_hash: d6fbc9d
       import: Importieren
       errors:
@@ -2844,6 +2854,12 @@ de:
       orga_closed_reg_success: Anmeldung erfolgreich geschlossen.
       #original_hash: 7f197a0
       orga_closed_reg_failure: Anmeldung kann nicht geschlossen werden.
+      #original_hash: 74caf1a
+      no_waiting_list_specified: >-
+        Dieser Wettbewerb hat keine Deadline zum Akzeptieren von Teilnehmern auf
+        der Warteliste. Wenn du eine Warteliste verwendest, gib bitte eine
+        Deadline an. Wenn du keine Warteliste verwendest, beachte, dass du dies
+        in den Anmeldebedingungen angeben musst.
     my_competitions:
       #original_hash: 5c6d3ea
       title: Meine Wettbewerbe
@@ -3080,10 +3096,6 @@ de:
     index:
       #original_hash: db98a68
       title: Wettbewerbe
-      #original_hash: f483b9c
-      disclaimer: >-
-        Bitte beachte, dass manche Länder aufgrund der Covid-19-Pandemie aktuell
-        keine Wettbewerbe austragen können.
       #original_hash: 6a72085
       all_events: Alle
       #original_hash: 6d76b81
@@ -3536,14 +3548,12 @@ de:
         qualification_html: >-
           Qualifikationszeiten müssen in anderen WCA-Wettbewerben erreicht
           werden, um teilnehmen zu können.
-        #original_hash: 3b524fd
-        qualification_all_events_html: >-
-          Die Deadline zum Erreichen der Qualifikationszeiten ist
-          <b>%{date}</b>.
-        #original_hash: 0d791e9
+        #original_hash: 51dfad5
+        qualification_all_events_html: 'Qualifikationszeiten müssen vor dem <b>%{date}</b> erreicht werden.'
+        #original_hash: 5eac9e5
         qualification_some_events_html: >-
-          Die Deadline zum Erreichen der Qualifikationszeiten für %{events} ist
-          <b>%{date}</b>.
+          Qualifikationszeiten in %{events} müssen vor dem <b>%{date}</b>
+          erreicht werden.
       #original_hash: 041a5de
       format: Format
       #original_hash: 0d1fcc3
@@ -3783,8 +3793,8 @@ de:
       name: Name
       #original_hash: 5faa59d
       result: Ergebnis
-      #original_hash: e0f64f7
-      citizen_of: Staatsbürger von
+      #original_hash: fa4c045
+      representing: Vertritt
       #original_hash: 1917f4f
       competition: Turnier
       #original_hash: e7f6fc5
@@ -3815,8 +3825,8 @@ de:
       name_or_wca_id: Teile des Namens oder WCA-ID
       #original_hash: 709a232
       name: Name
-      #original_hash: d523ebb
-      country: Land
+      #original_hash: fa4c045
+      country: Vertritt
       #original_hash: 02ae2bd
       podiums: Podien
       #original_hash: 56656a0
@@ -3828,12 +3838,12 @@ de:
       completed_solves: Erfolgreiche Versuche
       #original_hash: fc78642
       personal_records: Aktuelle persönliche Rekorde
-      #original_hash: e631f13
+      #original_hash: 2ad8fd5
       odd_rank_reason: >-
-        Ein fehlender Rank oder ein schlechteres Landesranking als das des
-        Kontinents entsteht durch einen Wechsel der Nationalität. Ergebnisse aus
-        bisherigen Regionen werden nicht berücksichtigt in der aktuellen
-        Rangliste der Region.
+        Ein fehlender Rang oder ein schlechterer regionaler Rang als der
+        kontinentale Rang resultiert aus einem Wechsel der Region. Ergebnisse
+        der vorherigen Region werden im aktuellen regionalen Ranking nicht
+        berücksichtigt.
       #original_hash: a91508f
       championship_podiums: Meisterschafts-Podien
       championship_podium_levels:
@@ -4200,15 +4210,16 @@ de:
       href="https://www.worldcubeassociation.org/documents/WCA_Vision_and_Strategy.pdf">hier</a>.</p>
     #original_hash: f64ccc7
     whats_next_title: Was ist bei der WCA geplant?
-    #original_hash: a08c67f
+    #original_hash: 2fea363
     whats_next_content_html: >-
-      <p>Die World Cube Association hatte bislang über 100.000 Mitglieder in 140
-      Ländern und wir planen nicht, unser Wachstum bald zu verlangsamen! Die
-      Cubing Community wächst kontinuierlich seitdem sie 2004 gegründet wurde
-      und wir möchten dies in Zukunft unterstützen, indem wir die Erreichbarkeit
-      von Competitions in neuen Regionen erhöhen. In der Zukunft hoffen wir,
-      unsere Community auch durch Kooperationen mehr zu unterstützen und all die
-      zu erreichen, die sich für Puzzle begeistern.</p>
+      <p>Die World Cube Association hat bereits über 100 000 individuelle
+      Teilnehmer aus 140 verschiedenen Regionen und wir planen nicht, langsamer
+      zu werden! Die Cubing-Community ist seit unserer Gründung 2004 stetig
+      gewachsen und wir möchten auch in Zukunft dazu beitragen, indem wir die
+      Erreichbarkeit von Wettbewerben in neuen Regionen verbessern. Zukünftig
+      hoffen wir unsere Community durch Kollaborationen und
+      Öffentlichkeitsarbeit für an Puzzles interessierten Personen zu erweitern.
+      </p>
     #original_hash: dc71704
     world_championship_title: Weltmeisterschaft
     #original_hash: 57cf7f7
@@ -4529,15 +4540,15 @@ de:
     how_to:
       #original_hash: b243b1f
       title: Wie man eine offiziell anerkannte regionale WCA Organisation wird
-      #original_hash: f042a88
+      #original_hash: 9f31403
       description: >-
-        Die WCA erkennt verschiedene regionale Organisationen weltweit an. Der
-        Zweck einer regionalen Organisation ist die Organisation von WCA
-        Turnieren und die Unterstützung von WCA Aktivitäten in der Region.
-        Länder, die eine regionale Organisation gründen wollen, sind eingeladen
-        einen Beitrag zu WCA Aktivitäten in ihrer Region zu leisten, bevor sie
-        eine Bewerbung abgeben. Um Hilfe bei der Organisation von WCA Turnieren
-        zu erhalten, kontaktiere bitte deinen nächsten WCA Delegate.
+        Die WCA erkennt diverse Regionale Organisationen an. Der Zweck einer WCA
+        Regional Organization ist, WCA Wettbewerbe zu organisieren und die WCA
+        Aktivitäten in der Region zu unterstützen. Regionen, die eine Regional
+        Organization werden möchten, sind angehalten, vor ihrer Bewerbung
+        zunächst Beiträge zur WCA zu leisten. Wird Hilfe zur Organisation eines
+        WCA Wettbewerbs in deiner Umgebung benötigt, kontaktiere bitte deinen
+        nächsten WCA Delegate.
     requirements:
       #original_hash: 1e04fd7
       title: Anforderungen an regionale WCA Organisationen
@@ -5229,8 +5240,8 @@ de:
       olist1:
         #original_hash: de00462
         '1': Die beiden Wettbewerbe haben keine gemeinsamen Events.
-        #original_hash: f7bacc5
-        '2': Die beiden Wettbewerbe finden in verschiedenen Ländern statt.
+        #original_hash: b8ff462
+        '2': Die beiden Wettbewerbe finden in verschiedenen Regionen statt.
       #original_hash: 5c5cf04
       content2: >-
         Simultane FMC Wettbewerbe sind Wettbewerbe, die nur die Kategorie 3x3x3
@@ -5536,6 +5547,28 @@ de:
       zu deinen Account zuzugreifen:
     #original_hash: 040b3da
     legal_tnoodle_api_header: Zugelassene TNoodle-Version
+  merch:
+    #original_hash: 96a95a1
+    title: WCA Merchandise
+    paragraphs:
+      #original_hash: 8a23af2
+      '1': >-
+        Die WCA bietet exklusives Merchandise zum Verkauf an! Von T-Shirts,
+        Hoodies, Stickern, Stackmats, Rucksäcken, und mehr! Unsere Designs
+        werden kontinuierlich überarbeitet, einschließlich des klassischen WCA
+        Logos, des offiziellen Merchandise zur Weltmeisterschaft, und
+        Weltrekord-Designs.
+      #original_hash: 2865e1d
+      '2': >-
+        Der Kauf von WCA Merch in unseren Shop ist eine der besten
+        Möglichkeiten, die WCA zu unterstützen - eine Non-Profit-, von
+        Freiwilligen betriebene Organisation. Wir verwenden alle durch
+        Merchandise erzielten Einnahmen zur weiteren Finanzierung von
+        Meisterschaften, Equipment und anderen WCA Aktivitäten.
+      #original_hash: 8e57552
+      '3': >-
+        Du kannst unser Merchandise auf der ganzen Welt kaufen -- mit direktem
+        Vertrieb in Europa, Amerika und Indien, und bald noch mehr!
   database:
     results_export:
       #original_hash: 15d00e1
