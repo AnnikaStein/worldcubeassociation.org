@@ -436,6 +436,8 @@ de:
         location: Standort
         #original_hash: 0f21717
         region: Region
+        #original_hash: e3fc6e9
+        subRegion: Unterregion
         #original_hash: 730db33
         receive_delegate_reports: >-
           Ich möchte gerne Delegate Reports von WCA Competitions per E-Mail
@@ -764,6 +766,8 @@ de:
           candidate_delegate: Junior-Delegate
           #original_hash: 12ab214
           delegate: Delegate
+          #original_hash: 45c2317
+          regional_delegate: Regional-Delegate
           #original_hash: d463c23
           senior_delegate: Senior-Delegate
         teams_committees:
@@ -2120,8 +2124,8 @@ de:
         #original_hash: 1a18831
         '7': Der Avatar darf keine offensiven Inhalte haben (z.B. offensive Gesten)
       staff_avatar_guidelines:
-        #original_hash: da9e6df
-        title: 'Zusätzliche Richtlinien für Mitarbeiter:'
+        #original_hash: 5d5a47a
+        title: 'Zusätzliche Richtlinien für Mitarbeiter und Trainee-Delegates:'
         paragraphs:
           #original_hash: ff6d2e8
           '1': >-
@@ -2251,6 +2255,12 @@ de:
         spezielle Formular</a>, um das zu beheben.
       #original_hash: 92aa857
       unknown_wca_id_html: 'Die WCA-ID %{link_id} existiert nicht.'
+  user_groups:
+    group_types:
+      #original_hash: abd2828
+      board: WCA Board of Directors
+      #original_hash: d79bd00
+      officers: WCA Officers
   registrations:
     errors:
       #original_hash: 44ab952
@@ -2353,8 +2363,8 @@ de:
         mail_subject: 'Anmeldung in Überprüfung: %{comp_name}'
         #original_hash: 6aa057a
         registered_html: >-
-          Deine Anmeldung für %{comp_name} befindet sich in Überprüfung und wartet auf
-          Bestätigung des Organisationsteams.
+          Deine Anmeldung für %{comp_name} befindet sich in Überprüfung und
+          wartet auf Bestätigung des Organisationsteams.
         #original_hash: f98b245
         awaits_approval: >-
           Bitte stelle sicher, dass du alle Anmeldebedingungen des Wettbewerbs
@@ -3138,6 +3148,8 @@ de:
       past_from: 'Vergangene aus %{year}'
       #original_hash: 7cff459
       past_all: Vergangene aus allen Jahren
+      #original_hash: 6eef664
+      no_delegates: Nichts
       #original_hash: 819fe62
       show_cancelled: Zeige abgesagte Wettbewerbe
       #original_hash: 0eda967
@@ -3186,6 +3198,8 @@ de:
           full: >-
             Das Teilnehmerlimit wurde erreicht, neue Anmeldungen gelangen auf
             die Warteliste.
+      #original_hash: 28531af
+      no_more_comps: Keine weiteren Wettbewerbe.
       #original_hash: 8b09d74
       no_comp_found: Keine Wettbewerbe gefunden.
       #original_hash: 7008166
@@ -3224,10 +3238,10 @@ de:
         Unterstützt <a
         href='https://daringfireball.net/projects/markdown/basics'
         target='_blank'>Markdown</a>
-      #original_hash: e5cbb13
+      #original_hash: 8ea1fac
       name_reason_html: >-
         Eine kurze Erklärung des Namens des Turniers. Der Name muss der <a
-        href='https://documents.worldcubeassociation.org/documents/policies/external/Competition%20Name20Requirements.pdf'>WCA
+        href='https://documents.worldcubeassociation.org/documents/policies/external/Competition%20Requirements.pdf'>WCA
         Competition Requirements Policy</a> entsprechen.
       #original_hash: 9d9126e
       venue_html: >-
@@ -3903,12 +3917,13 @@ de:
       unstick_at_future: muss in der Zukunft liegen
   contacts:
     website:
-      #original_hash: 35c333c
+      #original_hash: d7707e7
       faq_note_html: >-
         Bevor du eine Anfrage erstellst, solltest du einen Blick in unsere <a
         href="/faq">Frequently Asked Questions</a> werfen! Falls du ein
-        bestimmtes Komitee oder Team kontaktieren willst, findest du dessen
-        Kontaktinformationen auf <a href="/teams-committees">dieser Seite</a>.
+        bestimmtes, hier nicht aufgelistetes Komitee oder Team kontaktieren
+        willst, findest du dessen Kontaktinformationen auf <a
+        href="/teams-committees">dieser Seite</a>.
       #original_hash: 4ef2aad
       title: WCA Kontaktformular
       inquiries:
@@ -4209,16 +4224,16 @@ de:
     spirit_footer: WCA Spirit
     #original_hash: c1781ee
     our_goals_title: Unsere Ziele
-    #original_hash: 743ca74
+    #original_hash: 375db0f
     our_goals_content_html: >-
       <p>Die World Cube Association möchte durch die steigende Verfügbarkeit von
       Competitions jungen Menschen in aller Welt die Möglichkeit geben, Mitglied
       der Community zu werden und darin Führungspositionen zu übernehmen. Wir
       glauben, dass die Erfahrungen, die junge Menschen bei Competitions und
       innerhalb unserer Community machen, Wachstumschancen für alle Beteiligten
-      bietet und dass die Einführung von Veranstaltungen für neue
+      bieten und dass die Einführung von Veranstaltungen für neue
       Personengruppen erlaubt, die Community weiter zu stärken. Ein Dokument mit
-      den Visionen und Strategien des Vorstands der WCA gibt es <a
+      den Visionen und Strategien der WCA gibt es <a
       href="https://documents.worldcubeassociation.org/documents/WCA_Vision_and_Strategy.pdf">hier</a>.</p>
     #original_hash: f64ccc7
     whats_next_title: Was ist bei der WCA geplant?
@@ -4537,6 +4552,8 @@ de:
     acknowledges: 'Die WCA erkennt die folgenden WCA Delegierten an:'
     #original_hash: 0397112
     regions: Regionen
+    #original_hash: 0e57333
+    all_regions: Alle Regionen
     table:
       #original_hash: 709a232
       name: Name
@@ -4544,6 +4561,14 @@ de:
       role: Rolle
       #original_hash: 0f21717
       region: Region
+      #original_hash: fee4fb7
+      first_delegated: Erstes Mal delegiert
+      #original_hash: e2232e5
+      last_delegated: Zuletzt delegiert
+      #original_hash: 5ab4a17
+      total_delegated: Insgesamt delegiert
+      #original_hash: 90ccd64
+      history: Geschichte
   regional_organizations:
     #original_hash: 37b8fdc
     title: Regionale Organisationen
@@ -5229,10 +5254,10 @@ de:
     paragraph3:
       #original_hash: 00d3bf8
       title: Fristen für die Ankündigung von Wettbewerben
-      #original_hash: 66bf437
+      #original_hash: 477a672
       content_html: >-
-        Die Competition muss mindestens 28 Tage vor dem Termin angekündigt
-        werden (siehe <a
+        Die Competition muss mindestens 28 Tage vor dem Start der Competition
+        angekündigt werden (siehe <a
         href='https://documents.worldcubeassociation.org/documents/policies/external/Competition%20Requirements.pdf'>Competition
         Requirements</a>). Jedoch ist dieser Zeitraum selten ausreichend. Du
         solltest alle Punkte beachten, die die Organisation der Competition
@@ -5291,18 +5316,18 @@ de:
     paragraph5:
       #original_hash: 17d01de
       title: Teilnehmerlimit
-      #original_hash: bd8e6ee
+      #original_hash: 6bfef2c
       content_html: >-
         Die Anzahl der Teilnehmer darf für einzelne Kategorien oder für den
         Wettbewerb begrenzt werden (siehe <a
         href='https://documents.worldcubeassociation.org/documents/policies/external/Competition%20Requirements.pdf'>Competition
-        Requirements</a>). Der Delegierte muss die Erlaubnis des WCAT erhalten.
-        Teilnehmerlimits sollten umsichtig gesetzt werden und dem erwarteten
-        Interesse von Teilnehmern gerecht werden. Das Limit sollte nicht aus
-        nebensächlichen Gründen niedriger gesetzt werden. Das beabsichtigte
-        Teilnehmerlimit sollte schon bei der Suche nach einem passenden
-        Veranstaltungsort beachtet werden. Das Teilnehmerlimit muss klar und
-        deutlich auf der Wettbewerbsseite angekündigt werden.
+        Requirements</a>). Der Delegierte muss die Erlaubnis des WCAT für das
+        Teilnehmerlimit erhalten. Teilnehmerlimits sollten umsichtig gesetzt
+        werden und dem erwarteten Interesse von Teilnehmern gerecht werden. Das
+        Limit sollte nicht aus nebensächlichen Gründen niedriger gesetzt werden.
+        Das beabsichtigte Teilnehmerlimit sollte schon bei der Suche nach einem
+        passenden Veranstaltungsort beachtet werden. Das Teilnehmerlimit muss
+        klar und deutlich auf der Wettbewerbsseite angekündigt werden.
     paragraph6:
       #original_hash: ce4c3d0
       title: Verwaltung der Anmeldungen
